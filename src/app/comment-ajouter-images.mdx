@@ -1,0 +1,52 @@
+# Comment ajouter vos propres images au portfolio
+
+Ce guide vous explique comment personnaliser votre portfolio en ajoutant vos propres images et captures d'écran.
+
+## Structure des dossiers d'images
+
+Votre portfolio dispose de deux dossiers principaux pour stocker les images :
+
+1. `/public/images/icons` - Pour les icônes et logos de projets
+2. `/public/images/projects` - Pour les captures d'écran de vos projets
+
+## Comment ajouter une icône de projet
+
+1. Préparez votre image (logo ou icône) idéalement au format PNG ou SVG
+2. Redimensionnez-la en 300x300 pixels environ
+3. Placez le fichier dans le dossier `/public/images/icons`
+4. Ouvrez le fichier `src/lib/projects.ts`
+5. Remplacez le chemin `imageUrl` par le chemin de votre nouvelle image, par exemple:
+   ```typescript
+   imageUrl: '/images/icons/mon-nouveau-logo.png'
+   ```
+
+## Comment ajouter des captures d'écran
+
+1. Préparez vos captures d'écran (format PNG ou JPG recommandé)
+2. Redimensionnez-les pour qu'elles aient une largeur d'environ 1200-1600 pixels
+3. Placez les fichiers dans le dossier `/public/images/projects`
+4. Ouvrez le fichier `src/lib/projects.ts`
+5. Mettez à jour la propriété `screenshots` du projet concerné, par exemple:
+   ```typescript
+   screenshots: [
+     '/images/projects/capture1.png',
+     '/images/projects/capture2.png',
+     '/images/projects/capture3.png'
+   ]
+   ```
+
+## Conseils pour de meilleures images
+
+- **Icônes de projet** : utilisez des images claires avec un fond transparent si possible
+- **Captures d'écran** : prenez des captures d'écran qui montrent clairement les fonctionnalités de votre projet
+- **Dimensions** : gardez des dimensions cohérentes pour toutes vos images
+- **Qualité** : utilisez des images de bonne qualité mais optimisées pour le web (moins de 500 Ko par image)
+
+## Comment utiliser des icônes temporaires
+
+Si vous n'avez pas encore d'icônes ou de captures d'écran, vous pouvez utiliser des placeholders :
+
+1. Pour les icônes, vous pouvez utiliser des SVG simples comme ceux dans `/public`
+2. Pour les captures d'écran, vous pouvez générer des placeholders sur [https://placehold.co/](https://placehold.co/)
+
+N'oubliez pas de remplacer ces images temporaires par vos propres images dès que possible pour personnaliser votre portfolio ! 
